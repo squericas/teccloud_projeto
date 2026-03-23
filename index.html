@@ -3,34 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DarkWebDecoded - Como a polícia internacional desmonta redes de hackers">
-    <meta name="keywords" content="dark web, hackers, europol, fbi, operações policiais">
+    <meta name="description" content="DarkWebDecoded - Como a polícia internacional desmonta redes de hackers e mercados da dark web">
+    <meta name="keywords" content="dark web, hackers, europol, fbi, operações policiais, cibersegurança">
     <meta name="author" content="Grupo de Tecnologias de Cloud">
     
-    <title>DarkWebDecoded</title>
+    <title>DarkWebDecoded - Polícia vs Hackers</title>
     
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>🕵️ DarkWebDecoded</h1>
-        <p>Como a polícia internacional desmonta redes de hackers e mercados da dark web</p>
-        <nav> 
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="autores.html">Autores</a></li>
-                <li><a href="">DarkWeb</a></li>
-                <li><a href="">Operações</a></li>
-                <li><a href="">Operações Internacionais</a></li>
-                <li><a href="">Investigações</a></li>
-                <li><a href="">Mercados Derrubados</a></li>
-                <li><a href="">Desafios e Futuro</a></li>
+        <div class="container">
+            <h1>🕵️ DarkWebDecoded</h1>
+            <p>Como a polícia internacional desmonta redes de hackers e mercados da dark web</p>
+        </div>
+        
+        <nav>
+            <ul class="container">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#operacoes">Operações</a></li>
+                <li><a href="#mercados">Mercados</a></li>
+                <li><a href="#investigacao">Investigação</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#autores">Autores</a></li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <!-- SECÇÃO INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>🌐 O lado oculto da internet</h2>
+                <p>A dark web é uma parte escondida da internet onde criminosos operam mercados ilegais. <strong>Mas a polícia internacional está a vencer esta guerra digital.</strong></p>
+                <p>Descobre como a Europol, o FBI e a Polícia Judiciária conseguem infiltrar, investigar e derrubar as maiores redes de hackers do mundo.</p>
+                <a href="#operacoes" class="btn">Ver operações recentes →</a>
+            </div>
+        </section>
+
+        <!-- SECÇÃO SOBRE -->
+        <section id="sobre">
+            <div class="container">
+                <h2>📌 O que vais encontrar neste site</h2>
+                <div class="sobre-grid">
+                    <div class="sobre-card">
+                        <h3>🕵️ Operações internacionais</h3>
+                        <p>Detalhes sobre as maiores operações policiais: <strong>RapTor (2025)</strong>, <strong>Archetyp (2025)</strong>, Spector (2023), DarkHuntor (2021).</p>
+                    </div>
+                    <div class="sobre-card">
+                        <h3>🏴‍☠️ Mercados derrubados</h3>
+                        <p>A história dos maiores marketplaces da dark web: Archetyp, Nemesis, Tor2Door, Bohemia, Kingdom, DarkMarket.</p>
+                    </div>
+                    <div class="sobre-card">
+                        <h3>🔍 Métodos de investigação</h3>
+                        <p>Técnicas usadas pela polícia: infiltração, rastreio de criptomoedas, análise de servidores, cooperação internacional.</p>
+                    </div>
+                    <div class="sobre-card">
+                        <h3>📖 Glossário</h3>
+                        <p>Termos técnicos explicados de forma simples: Tor, Bitcoin, Monero, blockchain, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO OPERAÇÕES -->
+        <section id="operacoes">
+            <div class="container">
+                <h2>Operações internacionais (2025)</h2>
+                
+                <div class="operacoes-grid">
+                    <article class="operacao-card">
+                        <img src="images/operacao-raptor.jpg" alt="Operação RapTor" onerror="this.src='https://placehold.co/400x200?text=Operação+RapTor'">
+                        <h3>Operação RapTor (maio 2025)</h3>
+                        <p>detenções ...</p>
+                        <ul>
+                            <li>EUA</li>
+                            <li>Alemanha</li>
+                            <li>Reino Unido</li>
+                        </ul>
+                        <p>O que foi apreendido</p>
+                        <p></p>
+                        <p></p>
+                        <p class="fonte">Fonte: Europol</p>
+                    </article>
+                    
+                    <article class="operacao-card">
+                        <img src="images/operacao-archetyp.jpg" alt="Operação Archetyp" onerror="this.src='https://placehold.co/400x200?text=Operação+Archetyp'">
+                        <h3>Operação Archetyp (junho 2025)</h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p class="fonte">Fonte: Europol</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO MERCADOS DERRUBADOS -->
+        <section id="mercados">
+            <div class="container">
+                <h2>Mercados da dark web que já caíram</h2>
+                
+                <ul class="mercados-lista">
+                    <li><strong>Archetyp Market</strong> - +600k utilizadores, derrubado em junho 2025</li>
+                    <li><strong>Nemesis Market</strong> - Fonte de inteligência para Operação RapTor</li>
+                    <li><strong>Tor2Door</strong> - Fonte de inteligência para Operação RapTor</li>
+                    <li><strong>Bohemia Market</strong> - Fonte de inteligência para Operação RapTor</li>
+                    <li><strong>Kingdom Market</strong> - Fonte de inteligência para Operação RapTor</li>
+                    <li><strong>DarkMarket</strong> - 500k utilizadores, derrubado em 2021</li>
+                </ul>
+                
+                <h3>Comparação de operações</h3>
+                <table class="tabela-operacoes">
+                    <thead>
+                        <tr>
+                            <th>Operação</th>
+                            <th>Ano</th>
+                            <th>Detenções</th>
+                            <th>Valor apreendido</th>
+                            <th>Países</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RapTor</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Archetyp</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spector</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>DarkHuntor</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECÇÃO INVESTIGAÇÃO (LISTA HIERÁRQUICA) -->
+        <section id="investigacao">
+            <div class="container">
+                <h2>Como a polícia investiga na dark web</h2>
+                
+                <ol class="investigacao-lista">
+                    <li><strong>Infiltração</strong>
+                        <ul>
+                            <li>Agentes compram produtos como compradores</li>
+                            <li>Criam identidades falsas em fóruns</li>
+                            <li>Ganham confiança de administradores</li>
+                        </ul>
+                    </li>
+                    <li><strong>Rastreio tecnológico</strong>
+                        <ul>
+                            <li>Seguem transações de Bitcoin na blockchain</li>
+                            <li>Identificam servidores físicos dos mercados</li>
+                            <li>Analisam metadados e padrões de comportamento</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cooperação internacional</strong>
+                        <ul>
+                            <li>Europol coordena ações entre países</li>
+                            <li>Prisões simultâneas em múltiplas nações</li>
+                            <li>Partilha de inteligência entre polícias (FBI, PJ, BKA)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Apreensão e análise</strong>
+                        <ul>
+                            <li>Tomada de servidores em data centers</li>
+                            <li>Confisco de criptomoedas e bens</li>
+                            <li>Análise forense para identificar novos alvos</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SECÇÃO GLOSSÁRIO (com DL) -->
+        <section id="glossario">
+            <div class="container">
+                <h2>Glossário</h2>
+                
+                <dl class="glossario-lista">
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO AUTORES -->
+        <section id="autores">
+            <div class="container">
+                <h2>Autores do Projeto</h2>
+                
+                <div class="autores-grid">
+                    <article class="autor-card">
+                        <img src="images/autores/aluno1.jpg" alt="Foto do Aluno 1" onerror="this.src='https://placehold.co/150x150?text=Foto'">
+                        <h3>Aluno 1</h3>
+                        <p><strong>Função:</strong> </p>
+                        <p><strong>Interesses:</strong> </p>
+                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+                    </article>
+                    
+                    <article class="autor-card">
+                        <img src="images/autores/aluno2.jpg" alt="Foto do Aluno 2" onerror="this.src='https://placehold.co/150x150?text=Foto'">
+                        <h3>Aluno 2</h3>
+                        <p><strong>Função:</strong> </p>
+                        <p><strong>Interesses:</strong> </p>
+                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
+                    </article>
+                    
+                    <article class="autor-card">
+                        <img src="images/autores/aluno3.jpg" alt="Foto do Aluno 3" onerror="this.src='https://placehold.co/150x150?text=Foto'">
+                        <h3>Aluno 3</h3>
+                        <p><strong>Função:</strong> </p>
+                        <p><strong>Interesses:</strong> </p>
+                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">Behance</a></p>
+                    </article>
+                </div>
+                
+                <hr>
+                
+                <div class="contacto">
+                    <h3>Contacto da Equipa</h3>
+                    <p>Email: equipa@darkwebdecoded.pt</p>
+                    <p>Instituição: Tecnologias de Cloud - 2025/2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 - Projeto de Tecnologias de Cloud</p>
+        <div class="container">
+            <p>&copy; 2025 DarkWebDecoded - Projeto de Tecnologias de Cloud</p>
+            <p><a href="#inicio">Voltar ao topo ↑</a></p>
+        </div>
     </footer>
 </body>
 </html>

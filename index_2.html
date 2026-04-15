@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -24,35 +24,88 @@
 
                 <section id="intro-1">
                     <div id="intro-1-conceito">
-
+                        <h3>O que é a Dark Web?</h3>
+                        <p>A Dark Web é uma parte oculta da internet, não indexada por motores de busca como o Google, que exige softwares específicos (ex: Tor Browser) para acesso, garantindo alto anonimato e criptografia. Embora usada para atividades criminosas (venda de dados, mercados ilegais), também serve para privacidade em comunicações de jornalistas e ativistas, e o acesso a ela sem conhecimento técnico oferece riscos altos de segurança.</p>
                     </div>
 
                     <div id="intro-1-tor">
                         <h3>Tor</h3>
+                        <p>Tor (The Onion Router) é uma rede gratuita que permite navegar anonimamente. O teu tráfego é encriptado em camadas e passa por 3 servidores voluntários (entry, middle e exit), de forma que nenhum deles consegue ver toda a tua atividade ao mesmo tempo.</p>
+                        <p>O Tor é usado por jornalistas, ativistas e cidadãos comuns para proteger a sua privacidade. No entanto, a rede é lenta (3-10x mais que o normal) e existem riscos como exit nodes maliciosos (que podem ver tráfego não encriptado) e bloqueios por parte de muitos sites.</p>
+                        <p>Para usar o Tor em segurança, descarrega o Tor Browser, evita fazer login em contas pessoais e usa sempre sites com HTTPS (cadeado verde).</p>
+                        <p>O projeto foi desenvolvido originalmente pela Marinha dos EUA para proteger comunicações sensíveis. Atualmente é mantido por uma organização sem fins lucrativos e é usado por milhões de pessoas em todo o mundo.</p>
+                        <br>
+                        <h4>Como funciona o Tor?</h4>
+                        <p><strong>A metáfora da cebola:</strong> O nome "Onion Router" vem da forma como os dados são tratados. Quando usas o Tor, a tua informação é encriptada em várias camadas, como as camadas de uma cebola.</p>
+                        <p><strong>O circuito de 3 nós (relays):</strong> O teu tráfego não vai diretamente da tua casa para o site que queres visitar. Em vez disso, passa por três servidores voluntários (chamados relays ou nós), escolhidos aleatoriamente.</p>
+                        <ul>
+                            <li><strong>Entry Node (Nó de Entrada):</strong> Recebe o teu tráfego primeiro. Sabe quem és (teu IP) mas não sabe que site vais visitar.</li>
+                            <li><strong>Middle Node (Nó Intermédio):</strong> Encaminha o tráfego entre nós. Não sabe quem és nem qual é o destino final.</li>
+                            <li><strong>Exit Node (Nó de Saída):</strong> Envia o pedido para o site final. Sabe o site de destino mas não sabe quem és (vê o IP do nó anterior).</li>
+                        </ul>
+                        <p>Nenhum destes nós consegue ver todo o caminho ao mesmo tempo. É como se cada um visse apenas um pedaço do puzzle.</p>
                     </div>
 
                     <div id="intro-1-onion">
                         <h3>Domínios .onion</h3>
-
+                        <p>Domínios .onion são endereços especiais da Dark Web, acessíveis apenas através do navegador Tor Browser, que permitem anonimato total. Eles utilizam criptografia em camadas e roteamento onion, ocultando o IP e a localização do servidor. Não são DNS reais, sendo derivados de chaves criptográficas, o que os torna ilegíveis e difíceis de rastrear.</p>
+                        <p><strong>Principais Características:</strong></p>
+                        <ul>
+                            <li><strong>Acesso Restrito:</strong> Necessário o uso do Tor Browser para navegar na rede Tor.</li>
+                            <li><strong>Anonimato:</strong> Protege a identidade de utilizadores, jornalistas e ativistas, mas também é usado para atividades ilícitas.</li>
+                            <li><strong>Estrutura:</strong> São sequências longas e aleatórias de caracteres (ex: expyuzz4wqqyqhjn.onion).</li>
+                            <li><strong>Sem Registro Central:</strong> Não podem ser facilmente apreendidos, pois não dependem de autoridades centrais de domínio.</li>
+                        </ul>
                     </div>
 
                     <div id="intro-1-anonimato">
                         <h3>Anonimato</h3>
-
+                        <p>Anonimato é a condição de não identificação, onde a verdadeira identidade de uma pessoa ou autor de um ato é oculta, sem nome ou assinatura. Pode ser um direito, protegendo fontes ou permitindo denúncias, ou um método de comunicação online para ocultar intenções. Diferencia-se da privacidade, que oculta informações, focando em ocultar o autor.</p>
+                        <ul>
+                            <li><strong>Definição:</strong> Qualidade do que é anónimo, incógnito ou desconhecido.</li>
+                            <li><strong>Aplicações:</strong> Usado em denúncias, liberdade de expressão, arte (pseudónimos) e interações digitais.</li>
+                            <li><strong>Contexto Online:</strong> Envolve técnicas (VPNs, Tor, pseudónimos) para navegar sem ser rastreado.</li>
+                            <li><strong>Anonimato vs. Privacidade:</strong> A privacidade protege a informação; o anonimato protege a identidade do autor.</li>
+                            <li><strong>Exemplos:</strong> Enviar um e-mail sem identificação ou publicar um conteúdo sem colocar assinatura.</li>
+                        </ul>
+                        <p>O termo deriva do grego anōnymía, significando literalmente "sem nome".</p>
                     </div>
-
                 </section>
 
                 <section id="intro-2">
                     <div id="intro-2-diferenca">
-                        <h3>Diferença entre deep web e dark web.</h3>
+                        <h3>Diferença entre deep web e dark web</h3>
+                        <p>A principal diferença é que a Deep Web engloba todo o conteúdo não indexado (e-mails, bancos, arquivos privados) e é segura, enquanto a Dark Web é uma pequena parte oculta da Deep Web que exige navegadores especiais (como o Tor) para anonimato, sendo frequentemente usada para atividades ilícitas e riscos de segurança.</p>
+                        <p><strong>Deep Web (Internet Profunda):</strong></p>
+                        <ul>
+                            <li><strong>O que é:</strong> Conteúdo da web não indexado por motores de busca (Google, Bing).</li>
+                            <li><strong>Acesso:</strong> Navegadores comuns, mas exige login/senha.</li>
+                            <li><strong>Exemplos:</strong> E-mails, serviços bancários, serviços de streaming pagos, bases de dados acadêmicas, páginas de nuvem.</li>
+                            <li><strong>Segurança:</strong> Geralmente segura e faz parte do dia a dia.</li>
+                        </ul>
+                        <p><strong>Dark Web (Internet Obscura):</strong></p>
+                        <ul>
+                            <li><strong>O que é:</strong> Uma subcamada da Deep Web, criptografada e intencionalmente oculta.</li>
+                            <li><strong>Acesso:</strong> Requer ferramentas específicas, como o navegador Tor.</li>
+                            <li><strong>Exemplos:</strong> Fóruns anônimos, mercados de produtos ilegais (drogas, armas), sites com terminação .onion.</li>
+                            <li><strong>Segurança:</strong> Alto risco de malware, golpes e conteúdo ilegal.</li>
+                        </ul>
                     </div>
-
                 </section>
 
                 <section id="intro-3">
                     <div id="intro-3-criminosos">
-                        <h3>Por que criminosos usam a dark web.</h3>
+                        <h3>Por que criminosos usam a dark web</h3>
+                        <p>Criminosos utilizam a dark web principalmente pelo anonimato extremo e dificuldade de rastreamento pelas autoridades, permitindo atividades ilícitas com baixo risco de identificação. É um mercado negro para vender dados roubados (cartões, credenciais), armas, drogas e contratar serviços de hackers (Ransomware-as-a-Service).</p>
+                        <p><strong>Os principais motivos para o uso da dark web incluem:</strong></p>
+                        <ul>
+                            <li><strong>Anonimato e Criptografia:</strong> A infraestrutura (como a rede Tor) oculta a localização e identidade dos usuários, dificultando a ação policial.</li>
+                            <li><strong>Mercado Negro (Marketplaces):</strong> Venda de informações confidenciais, dados bancários, documentos falsos e ferramentas de hacking.</li>
+                            <li><strong>Comércio de Dados Roubados:</strong> Local para negociar informações obtidas em ataques de ransomware e violações de dados.</li>
+                            <li><strong>Comunicação Segura:</strong> Fóruns clandestinos permitem que cibercriminosos planejem ataques e compartilhem técnicas sem serem detectados.</li>
+                            <li><strong>Serviços Ilegais:</strong> Oferta de ataques DDoS, malware personalizado e serviços de lavagem de dinheiro.</li>
+                        </ul>
+                        <p>Embora associada ao crime, a dark web também é usada para privacidade, jornalismo e por denunciantes (whistleblowers) em países com restrições.</p>
                     </div>
                 </section>
             </article>
@@ -76,34 +129,33 @@
             </article>
 
             <article id="caso-alice">
-
                 <h1 id="casos-reais">Casos reais</h1>
                 <hr>
-
                 <h2>Operação Alice — 373 mil sites fraudulentos derrubados</h2>
 
                 <section id="caso-alice-resumo">
                     <h3>Resumo da operação.</h3>
-
-                    <p></p>
+                    <p>Uma operação internacional de grande escala, liderada pelas autoridades alemãs com o apoio europeu, resultou no encerramento de mais de 373 mil sites na dark web. Segundo os detalhes partilhados pela Europol, estas plataformas dedicavam-se à venda de falsos pacotes de material de abuso sexual infantil e a diversos serviços de cibercrime.</p>
+                    <p><strong>Principais resultados:</strong> Sites fraudulentos derrubados: +373.000 | Servidores apreendidos: 105 | Utilizadores identificados: 440 | Período da investigação: 2021 — 2026 (quase 5 anos).</p>
                 </section>
 
                 <section id="caso-alice-gestao">
                     <h3>Como um único operador geria centenas de milhares de sites.</h3>
-
-                    <p></p>
+                    <p>O suspeito principal é um homem de 35 anos residente na China. Sozinho, ele operava mais de 373.000 domínios .onion (sites na dark web).</p>
+                    <p><strong>Como funcionava o esquema:</strong> Entre fevereiro de 2020 e julho de 2025, usou mais de 90.000 desses domínios para anunciar conteúdos ilegais. Os sites vendiam "pacotes" de material de abuso sexual infantil (CSAM) e serviços de cibercrime (dados de cartões de crédito, acessos a sistemas). Os preços variavam entre €17 e €215 por pacote. Os clientes pagavam em Bitcoin após fornecerem email. Os sites eram FRAUDULENTOS - o material prometido nunca era entregue. O suspeito terá feito um lucro de cerca de €345.000 com aproximadamente 10.000 clientes em todo o mundo.</p>
                 </section>
 
                 <section id="caso-alice-rastreio">
                     <h3>Como a polícia rastreou servidores e domínios.</h3>
-
-                    <p></p>
+                    <p><strong>Métodos utilizados pelas autoridades:</strong> Investigação iniciada em meados de 2021 contra a plataforma "Alice with Violence CP". Rastreio de pagamentos em criptomoedas - a Europol ajudou a seguir as transações Bitcoin. Análise de servidores - o suspeito usou uma rede de até 287 servidores, sendo 105 localizados na Alemanha. Cooperação internacional - 23 países partilharam informações e coordenaram prisões. Identificação de utilizadores - 440 clientes foram identificados e estão a ser investigados.</p>
+                    <p><strong>Declaração da diretora da Europol, Catherine De Bolle:</strong> "Operation Alice sends a clear message: there is nowhere to hide for criminals when the international law enforcement community works hand in glove." (Em português: "A Operação Alice envia uma mensagem clara: não há onde se esconder para criminosos quando a comunidade internacional de aplicação da lei trabalha em uníssono.")</p>
                 </section>
 
                 <section id="caso-alice-impacto">
                     <h3>Impacto global.</h3>
-
-                    <p></p>
+                    <p><strong>Países participantes:</strong> 23 países, incluindo Alemanha (líder), Portugal (PJ), EUA (HSI), Reino Unido (NCA), Austrália, Canadá, França, Espanha, Países Baixos, Ucrânia, etc.</p>
+                    <p><strong>Impactos concretos:</strong> Mais de 373.000 sites fraudulentos foram desligados. 105 servidores apreendidos (computadores, telemóveis, discos). 440 utilizadores identificados (muitos a aguardar investigação). Mandado de prisão internacional emitido contra o operador.</p>
+                    <p><strong>Exemplo prático da proteção de vítimas:</strong> Em agosto de 2023, investigadores da polícia alemã fizeram uma busca à casa de um pai de 31 anos que transferiu €20 para comprar um pacote com 70 GB de material de abuso infantil. O homem foi condenado.</p>
                 </section>
             </article>
 
@@ -160,15 +212,108 @@
 
             <article id="como-policia-trabalha">
                 <h2>Como a polícia internacional investiga e derruba redes da dark web</h2>
+                <section id="como-policia-trabalha-intro">
+
+                    <p>A atuação contra o crime na dark web é um jogo de alto nível entre anonimato e tecnologia policial. 
+                        Apesar do uso de Tor, criptografia e criptomoedas, as forças internacionais têm desenvolvido 
+                        técnicas cada vez mais sofisticadas para identificar operadores, compradores e infraestruturas criminosas.
+                    </p>
+                </section>
 
                 <section id="como-policia-trabalha-cooperacao">
+                    
                     <h3>Cooperação Europol, FBI, Interpol.</h3>
 
-                    <p></p>
+                    <p>O fator mais importante no combate ao crime na dark web é a cooperação internacional.</p>
+                    <p>Nenhuma agência consegue agir sozinha, porque:</p>
+
+                    <ul>
+                        <li>servidores estão em vários países</li>
+                        <li>criminosos operam globalmente</li>
+                        <li>pagamentos e comunicações atravessam múltiplas jurisdições</li>
+                    </ul>
+
+                    <p>As grandes operações (como Silk Road, AlphaBay, Hansa, entre outras) só foram possíveis graças à colaboração entre FBI, Europol, Interpol e polícias nacionais.</p>
+                    
+                    <p>Além disso, organizações como a INTERPOL mantêm plataformas globais para troca rápida de informações e coordenação de ações simultâneas.</p>
                 </section>
 
                 <section id="como-policia-trabalha-tecnicas">
                     <h3>Técnicas: infiltração, análise de logs, apreensão de servidores, cooperação com ISPs.</h3>
+
+                    <ol>
+                        <li>Infiltração e operações encobertas</li>
+                        <p>Investigadores criam perfis falsos, participam de fóruns, fazem compras controladas e ganham confiança dos administradores.</p>
+                        
+                        <li>Análise de logs e falhas de OPSEC</li>
+                        <p>Criminosos cometem erros como:</p>
+                        <ul>
+                            <li>reutilizar emails pessoais</li>
+                            <li>usar servidores mal configurados</li>
+                            <li>deixar rastros em metadados</li>
+                        </ul>
+                        <p>Esses deslizes já levaram à prisão de administradores de grandes mercados.</p>
+
+                        <li>Apreensão de servidores e dispositivos</li>
+                        <p>Quando um servidor é apreendido:</p>
+                        <ul>
+                            <li>logs internos revelam identidades</li>
+                            <li>mensagens privadas são recuperadas</li>
+                            <li>carteiras de criptomoedas são rastreadas</li>
+                            <li>endereços .onion são desativados</li>
+                        </ul>
+                        <p>A apreensão física é um dos métodos mais eficazes.</p>
+
+                        <li>Cooperação com ISPs e empresas privadas</li>
+                        <p>Fornecedores de internet e empresas de segurança ajudam a:</p>
+
+                        <ul>
+                            <li>identificar tráfego suspeito</li>
+                            <li>fornecer dados de rede</li>
+                            <li>bloquear infraestrutura criminosa</li>
+                        </ul>
+
+                        <p>A Europol destaca a importância de parcerias público‑privadas.</p>
+
+                        <li>Rastreamento de criptomoedas</li>
+                        <p>Ferramentas avançadas de blockchain analysis permitem:</p>
+
+                        <ul>
+                            <li>seguir transações</li>
+                            <li>identificar padrões</li>
+                            <li>ligar carteiras a indivíduos</li>
+                        </ul>
+                        <p>Mesmo criptomoedas “anônimas” podem ser rastreadas com técnicas modernas.</p>
+
+                        <li>Forense digital e live forensics</li>
+                        <p>Técnicas incluem:</p>
+                        <ul>
+                            <li>captura de RAM</li>
+                            <li>extração de chaves de criptografia</li>
+                            <li>recuperação de dados apagados</li>
+                            <li>análise de VPNs, PGP keys e wallets</li>
+                        </ul>
+                        <p>Treinamentos da UNODC reforçam a necessidade de preservar cadeia de custódia e agir rapidamente antes que suspeitos desliguem dispositivos.</p>
+
+                        <li>A importância de operações sincronizadas em vários países</li>
+                        <p>Operações como AlphaBay e Hansa só funcionaram porque:</p>
+
+                        <ul>
+                            <li>vários países agiram no mesmo dia e hora</li>
+                            <li>servidores foram apreendidos simultaneamente</li>
+                            <li>administradores foram presos antes de alertarem usuários</li>
+                            <li>domínios e backups foram capturados ao mesmo tempo</li>
+                        </ul>
+                        <p>Sem sincronização, criminosos migrariam para novos servidores em minutos.</p>
+
+
+
+
+
+
+
+                    </ol>
+
                 </section>
 
                 <section id="como-policia-trabalha-operacoes">
@@ -199,7 +344,7 @@
 
             <article id="conclusao">
                 <h1>Conclusão</h1>
-                
+
                 <h2>O futuro da luta contra o crime na dark web</h2>
 
                 <section>
@@ -209,15 +354,17 @@
             </article>
         </div>
 
-        <div id="menu-lateral">
+        <!-- 
+        <aside id="menu-lateral">
             <h5>Ligações</h5>
-        </div>
+        </aside>
+        -->
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 DarkWebDecoded</p>
             <p><a href="#inicio">Voltar ao topo ↑</a></p>
+            <p>&copy; 2025 DarkWebDecoded</p>
         </div>
     </footer>
 </body>

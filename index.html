@@ -1,262 +1,668 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DarkWebDecoded - Como a polícia internacional desmonta redes de hackers e mercados da dark web">
-    <meta name="keywords" content="dark web, hackers, europol, fbi, operações policiais, cibersegurança">
-    <meta name="author" content="Grupo de Tecnologias de Cloud">
-    
-    <title>DarkWebDecoded - Polícia vs Hackers</title>
-    
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style_2.css">
+    <title>"DarkWebDecoded</title>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>🕵️ DarkWebDecoded</h1>
-            <p>Como a polícia internacional desmonta redes de hackers e mercados da dark web</p>
-        </div>
-        
-        <nav>
-            <ul class="container">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#operacoes">Operações</a></li>
-                <li><a href="#mercados">Mercados</a></li>
-                <li><a href="#investigacao">Investigação</a></li>
-                <li><a href="#glossario">Glossário</a></li>
-                <li><a href="#autores">Autores</a></li>
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio" class="nav-logo">
+                <img src="images/darkweb logo.jpg" alt="DarkWebDecoded" />
+                <span>DarkWebDecoded</span>
+            </a>
+
+            <button class="nav-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 18h16" />
+                </svg>
+
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#intro" class="nav-link">
+                        Introdução
+                    </a>
+                </li>
+
+                <li><a href="#mercados" class="nav-link">
+                        Mercados
+                    </a>
+                </li>
+
+                <li><a href="#casos-reais" class="nav-link">
+                        Casos Reais
+                    </a>
+                </li>
+
+
+
+                <li><a href="#como-policia-trabalha" class="nav-link">
+                        Trabalho Policial
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- SECÇÃO INÍCIO -->
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h2>🌐 O lado oculto da internet</h2>
-                <p>A dark web é uma parte escondida da internet onde criminosos operam mercados ilegais. <strong>Mas a polícia internacional está a vencer esta guerra digital.</strong></p>
-                <p>Descobre como a Europol, o FBI e a Polícia Judiciária conseguem infiltrar, investigar e derrubar as maiores redes de hackers do mundo.</p>
-                <a href="#operacoes" class="btn">Ver operações recentes →</a>
-            </div>
-        </section>
 
-        <!-- SECÇÃO SOBRE -->
-        <section id="sobre">
-            <div class="container">
-                <h2>📌 O que vais encontrar neste site</h2>
-                <div class="sobre-grid">
-                    <div class="sobre-card">
-                        <h3>🕵️ Operações internacionais</h3>
-                        <p>Detalhes sobre as maiores operações policiais: <strong>RapTor (2025)</strong>, <strong>Archetyp (2025)</strong>, Spector (2023), DarkHuntor (2021).</p>
+
+    <main id="container">
+        <div id="content">
+            <article id="intro">
+                <h1 id="intro-titulo">O que é Dark Web e por que ela importa?</h1>
+
+                <section id="intro-1">
+                    <div id="intro-1-conceito">
+                        <h3>O que é a Dark Web?</h3>
+                        <p>A Dark Web é uma parte oculta da internet, não indexada por motores de busca como o Google,
+                            que exige softwares específicos (ex: Tor Browser) para acesso, garantindo alto anonimato e
+                            criptografia. Embora usada para atividades criminosas (venda de dados, mercados ilegais),
+                            também serve para privacidade em comunicações de jornalistas e ativistas, e o acesso a ela
+                            sem conhecimento técnico oferece riscos altos de segurança.</p>
                     </div>
-                    <div class="sobre-card">
-                        <h3>🏴‍☠️ Mercados derrubados</h3>
-                        <p>A história dos maiores marketplaces da dark web: Archetyp, Nemesis, Tor2Door, Bohemia, Kingdom, DarkMarket.</p>
+
+                    <div id="intro-1-tor">
+                        <h3>Tor</h3>
+                        <p>Tor (The Onion Router) é uma rede gratuita que permite navegar anonimamente. O teu tráfego é
+                            encriptado em camadas e passa por 3 servidores voluntários (entry, middle e exit), de forma
+                            que nenhum deles consegue ver toda a tua atividade ao mesmo tempo.</p>
+                        <p>O Tor é usado por jornalistas, ativistas e cidadãos comuns para proteger a sua privacidade.
+                            No entanto, a rede é lenta (3-10x mais que o normal) e existem riscos como exit nodes
+                            maliciosos (que podem ver tráfego não encriptado) e bloqueios por parte de muitos sites.</p>
+                        <p>Para usar o Tor em segurança, descarrega o Tor Browser, evita fazer login em contas pessoais
+                            e usa sempre sites com HTTPS (cadeado verde).</p>
+                        <p>O projeto foi desenvolvido originalmente pela Marinha dos EUA para proteger comunicações
+                            sensíveis. Atualmente é mantido por uma organização sem fins lucrativos e é usado por
+                            milhões de pessoas em todo o mundo.</p>
+
+                        <h4>Como funciona o Tor?</h4>
+                        <p><span>A metáfora da cebola:</span> O nome "Onion Router" vem da forma como os dados são
+                            tratados. Quando usas o Tor, a tua informação é encriptada em várias camadas, como as
+                            camadas de uma cebola.</p>
+                        <p><span>O circuito de 3 nós (relays):</span> O teu tráfego não vai diretamente da tua casa
+                            para o site que queres visitar. Em vez disso, passa por três servidores voluntários
+                            (chamados relays ou nós), escolhidos aleatoriamente.</p>
+                        <ul>
+                            <li><span>Entry Node (Nó de Entrada):</span> Recebe o teu tráfego primeiro. Sabe quem és
+                                (teu IP) mas não sabe que site vais visitar.</li>
+                            <li><span>Middle Node (Nó Intermédio):</span> Encaminha o tráfego entre nós. Não sabe
+                                quem és nem qual é o destino final.</li>
+                            <li><span>Exit Node (Nó de Saída):</span> Envia o pedido para o site final. Sabe o site
+                                de destino mas não sabe quem és (vê o IP do nó anterior).</li>
+                        </ul>
+                        <p>Nenhum destes nós consegue ver todo o caminho ao mesmo tempo. É como se cada um visse apenas
+                            um pedaço do puzzle.</p>
                     </div>
-                    <div class="sobre-card">
-                        <h3>🔍 Métodos de investigação</h3>
-                        <p>Técnicas usadas pela polícia: infiltração, rastreio de criptomoedas, análise de servidores, cooperação internacional.</p>
+
+                    <div id="intro-1-onion">
+                        <h3>Domínios .onion</h3>
+                        <p>Domínios .onion são endereços especiais da Dark Web, acessíveis apenas através do navegador
+                            Tor Browser, que permitem anonimato total. Eles utilizam criptografia em camadas e
+                            roteamento onion, ocultando o IP e a localização do servidor. Não são DNS reais, sendo
+                            derivados de chaves criptográficas, o que os torna ilegíveis e difíceis de rastrear.</p>
+                        <p><span>Principais Características:</span></p>
+                        <ul>
+                            <li><span>Acesso Restrito:</span> Necessário o uso do Tor Browser para navegar na rede
+                                Tor.</li>
+                            <li><span>Anonimato:</span> Protege a identidade de utilizadores, jornalistas e
+                                ativistas, mas também é usado para atividades ilícitas.</li>
+                            <li><span>Estrutura:</span> São sequências longas e aleatórias de caracteres (ex:
+                                expyuzz4wqqyqhjn.onion).</li>
+                            <li><span>Sem Registro Central:</span> Não podem ser facilmente apreendidos, pois não
+                                dependem de autoridades centrais de domínio.</li>
+                        </ul>
                     </div>
-                    <div class="sobre-card">
-                        <h3>📖 Glossário</h3>
-                        <p>Termos técnicos explicados de forma simples: Tor, Bitcoin, Monero, blockchain, etc.</p>
+
+                    <div id="intro-1-anonimato">
+                        <h3>Anonimato</h3>
+                        <p>Anonimato é a condição de não identificação, onde a verdadeira identidade de uma pessoa ou
+                            autor de um ato é oculta, sem nome ou assinatura. Pode ser um direito, protegendo fontes ou
+                            permitindo denúncias, ou um método de comunicação online para ocultar intenções.
+                            Diferencia-se da privacidade, que oculta informações, focando em ocultar o autor.</p>
+                        <ul>
+                            <li><span>Definição:</span> Qualidade do que é anónimo, incógnito ou desconhecido.</li>
+                            <li><span>Aplicações:</span> Usado em denúncias, liberdade de expressão, arte
+                                (pseudónimos) e interações digitais.</li>
+                            <li><span>Contexto Online:</span> Envolve técnicas (VPNs, Tor, pseudónimos) para navegar
+                                sem ser rastreado.</li>
+                            <li><span>Anonimato vs. Privacidade:</span> A privacidade protege a informação; o
+                                anonimato protege a identidade do autor.</li>
+                            <li><span>Exemplos:</span> Enviar um e-mail sem identificação ou publicar um conteúdo
+                                sem colocar assinatura.</li>
+                        </ul>
+                        <p>O termo deriva do grego anōnymía, significando literalmente "sem nome".</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- SECÇÃO OPERAÇÕES -->
-        <section id="operacoes">
-            <div class="container">
-                <h2>Operações internacionais (2025)</h2>
-                
-                <div class="operacoes-grid">
-                    <article class="operacao-card">
-                        <img src="images/operacao-raptor.jpg" alt="Operação RapTor" onerror="this.src='https://placehold.co/400x200?text=Operação+RapTor'">
-                        <h3>Operação RapTor (maio 2025)</h3>
-                        <p>detenções ...</p>
+                <section id="intro-2">
+                    <div id="intro-2-diferenca">
+                        <h3>Diferença entre deep web e dark web</h3>
+                        <p>A principal diferença é que a Deep Web engloba todo o conteúdo não indexado (e-mails, bancos,
+                            arquivos privados) e é segura, enquanto a Dark Web é uma pequena parte oculta da Deep Web
+                            que exige navegadores especiais (como o Tor) para anonimato, sendo frequentemente usada para
+                            atividades ilícitas e riscos de segurança.</p>
+                        <p><span>Deep Web (Internet Profunda):</span></p>
                         <ul>
-                            <li>EUA</li>
-                            <li>Alemanha</li>
-                            <li>Reino Unido</li>
+                            <li><span>O que é:</span> Conteúdo da web não indexado por motores de busca (Google,
+                                Bing).</li>
+                            <li><span>Acesso:</span> Navegadores comuns, mas exige login/senha.</li>
+                            <li><span>Exemplos:</span> E-mails, serviços bancários, serviços de streaming pagos,
+                                bases de dados acadêmicas, páginas de nuvem.</li>
+                            <li><span>Segurança:</span> Geralmente segura e faz parte do dia a dia.</li>
                         </ul>
-                        <p>O que foi apreendido</p>
-                        <p></p>
-                        <p></p>
-                        <p class="fonte">Fonte: Europol</p>
-                    </article>
-                    
-                    <article class="operacao-card">
-                        <img src="images/operacao-archetyp.jpg" alt="Operação Archetyp" onerror="this.src='https://placehold.co/400x200?text=Operação+Archetyp'">
-                        <h3>Operação Archetyp (junho 2025)</h3>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p class="fonte">Fonte: Europol</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECÇÃO MERCADOS DERRUBADOS -->
-        <section id="mercados">
-            <div class="container">
-                <h2>Mercados da dark web que já caíram</h2>
-                
-                <ul class="mercados-lista">
-                    <li><strong>Archetyp Market</strong> - +600k utilizadores, derrubado em junho 2025</li>
-                    <li><strong>Nemesis Market</strong> - Fonte de inteligência para Operação RapTor</li>
-                    <li><strong>Tor2Door</strong> - Fonte de inteligência para Operação RapTor</li>
-                    <li><strong>Bohemia Market</strong> - Fonte de inteligência para Operação RapTor</li>
-                    <li><strong>Kingdom Market</strong> - Fonte de inteligência para Operação RapTor</li>
-                    <li><strong>DarkMarket</strong> - 500k utilizadores, derrubado em 2021</li>
-                </ul>
-                
-                <h3>Comparação de operações</h3>
-                <table class="tabela-operacoes">
-                    <thead>
-                        <tr>
-                            <th>Operação</th>
-                            <th>Ano</th>
-                            <th>Detenções</th>
-                            <th>Valor apreendido</th>
-                            <th>Países</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>RapTor</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Archetyp</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Spector</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>DarkHuntor</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECÇÃO INVESTIGAÇÃO (LISTA HIERÁRQUICA) -->
-        <section id="investigacao">
-            <div class="container">
-                <h2>Como a polícia investiga na dark web</h2>
-                
-                <ol class="investigacao-lista">
-                    <li><strong>Infiltração</strong>
+                        <p><span>Dark Web (Internet Obscura):</span></p>
                         <ul>
-                            <li>Agentes compram produtos como compradores</li>
-                            <li>Criam identidades falsas em fóruns</li>
-                            <li>Ganham confiança de administradores</li>
+                            <li><span>O que é:</span> Uma subcamada da Deep Web, criptografada e intencionalmente
+                                oculta.</li>
+                            <li><span>Acesso:</span> Requer ferramentas específicas, como o navegador Tor.</li>
+                            <li><span>Exemplos:</span> Fóruns anônimos, mercados de produtos ilegais (drogas,
+                                armas), sites com terminação .onion.</li>
+                            <li><span>Segurança:</span> Alto risco de malware, golpes e conteúdo ilegal.</li>
                         </ul>
-                    </li>
-                    <li><strong>Rastreio tecnológico</strong>
-                        <ul>
-                            <li>Seguem transações de Bitcoin na blockchain</li>
-                            <li>Identificam servidores físicos dos mercados</li>
-                            <li>Analisam metadados e padrões de comportamento</li>
-                        </ul>
-                    </li>
-                    <li><strong>Cooperação internacional</strong>
-                        <ul>
-                            <li>Europol coordena ações entre países</li>
-                            <li>Prisões simultâneas em múltiplas nações</li>
-                            <li>Partilha de inteligência entre polícias (FBI, PJ, BKA)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Apreensão e análise</strong>
-                        <ul>
-                            <li>Tomada de servidores em data centers</li>
-                            <li>Confisco de criptomoedas e bens</li>
-                            <li>Análise forense para identificar novos alvos</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-        </section>
+                    </div>
+                </section>
 
-        <!-- SECÇÃO GLOSSÁRIO (com DL) -->
-        <section id="glossario">
-            <div class="container">
-                <h2>Glossário</h2>
-                
-                <dl class="glossario-lista">
+                <section id="intro-3">
+                    <div id="intro-3-criminosos">
+                        <h3>Por que criminosos usam a dark web</h3>
+                        <p>Criminosos utilizam a dark web principalmente pelo anonimato extremo e dificuldade de
+                            rastreamento pelas autoridades, permitindo atividades ilícitas com baixo risco de
+                            identificação. É um mercado negro para vender dados roubados (cartões, credenciais), armas,
+                            drogas e contratar serviços de hackers (Ransomware-as-a-Service).</p>
+                        <p><span>Os principais motivos para o uso da dark web incluem:</span></p>
+                        <ul>
+                            <li><span>Anonimato e Criptografia:</span> A infraestrutura (como a rede Tor) oculta a
+                                localização e identidade dos usuários, dificultando a ação policial.</li>
+                            <li><span>Mercado Negro (Marketplaces):</span> Venda de informações confidenciais, dados
+                                bancários, documentos falsos e ferramentas de hacking.</li>
+                            <li><span>Comércio de Dados Roubados:</span> Local para negociar informações obtidas em
+                                ataques de ransomware e violações de dados.</li>
+                            <li><span>Comunicação Segura:</span> Fóruns clandestinos permitem que cibercriminosos
+                                planejem ataques e compartilhem técnicas sem serem detectados.</li>
+                            <li><span>Serviços Ilegais:</span> Oferta de ataques DDoS, malware personalizado e
+                                serviços de lavagem de dinheiro.</li>
+                        </ul>
+                        <p>Embora associada ao crime, a dark web também é usada para privacidade, jornalismo e por
+                            denunciantes (whistleblowers) em países com restrições.</p>
+                    </div>
+                </section>
+            </article>
 
-            </div>
-        </section>
+            <article id="mercados">
+                <h2 id="mercados-titulo">Como funcionam os mercados e fóruns criminosos</h2>
 
-        <!-- SECÇÃO AUTORES -->
-        <section id="autores">
-            <div class="container">
-                <h2>Autores do Projeto</h2>
-                
-                <div class="autores-grid">
-                    <article class="autor-card">
-                        <img src="images/autores/aluno1.jpg" alt="Foto do Aluno 1" onerror="this.src='https://placehold.co/150x150?text=Foto'">
-                        <h3>Aluno 1</h3>
-                        <p><strong>Função:</strong> </p>
-                        <p><strong>Interesses:</strong> </p>
-                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
-                    </article>
-                    
-                    <article class="autor-card">
-                        <img src="images/autores/aluno2.jpg" alt="Foto do Aluno 2" onerror="this.src='https://placehold.co/150x150?text=Foto'">
-                        <h3>Aluno 2</h3>
-                        <p><strong>Função:</strong> </p>
-                        <p><strong>Interesses:</strong> </p>
-                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
-                    </article>
-                    
-                    <article class="autor-card">
-                        <img src="images/autores/aluno3.jpg" alt="Foto do Aluno 3" onerror="this.src='https://placehold.co/150x150?text=Foto'">
-                        <h3>Aluno 3</h3>
-                        <p><strong>Função:</strong> </p>
-                        <p><strong>Interesses:</strong> </p>
-                        <p><strong>Redes sociais:</strong> <a href="#">LinkedIn</a> | <a href="#">Behance</a></p>
-                    </article>
-                </div>
-                
+                <section id="mercados-marketplaces">
+                    <h3>Marketplaces de credenciais (ex.: LeakBase).</h3>
+                    <p>Os marketplaces de credenciais são plataformas (geralmente na dark web, mas às vezes também em
+                        fóruns ou grupos em plataformas de comunicação encriptada) onde dados de login roubados como
+                        emails, senhas, acessos a serviços, são comprados e vendidos.</p>
+                    <p><span>Origem das credenciais:</span></p>
+                    <ul>
+                        <li><span>Fugas de informação de grandes empresas</span></li>
+                        <li><span>Ataques de phishing </span>(enganar utilizadores para obter credenciais)</li>
+                        <li><span>Malware</span> (programas que registam teclas ou roubam dados do navegador)</li>
+                        <li><span>Reutilização de palavras-passe entre vários serviços </span>(quando uma
+                            palavra-passe funciona em vários sites)</li>
+                    </ul>
+                    <p><span>Como funcionam os marketplaces?</span></p>
+                    <p>Elas imitam lojas online normais:</p>
+                    <ul>
+                        <li><span>Catálogo de contas </span>(Netflix, bancos, redes sociais, etc.)</li>
+                        <li><span>Preços variam conforme valor da conta </span> (ex: conta com saldo alto/plano
+                            premium custa mais)</li>
+                        <li><span>Sistema de avaliações de vendedores</span> (tipo “reputação”)</li>
+                        <li><span>Pagamento geralmente em Bitcoin ou outras criptomoedas</span></li>
+                    </ul>
+                    <p>Alguns exemplos conhecidos (históricos ou desativados) incluem fóruns e mercados como Genesis
+                        Market.</p>
+                    <p><span>Tipos de produto vendidos nos marketplaces:</span></p>
+                    <ul>
+                        <li><span>Combo lists:</span> listas de emails e palavras-passe</li>
+                        <li><span>Logs completos: </span>dados recolhidos por malware (cookies, sessões, autofill)
+                        </li>
+                        <li><span>Contas válidas: </span>acessos já testados</li>
+                        <li><span>“Fullz”:</span> dados completos de identidade + informação financeira</li>
+                    </ul>
+                    <p><span>Utilização por compradores</span></p>
+                    <p>Quem compra estas credenciais pode:</p>
+                    <ul>
+                        <li><span>Roubar dinheiro ou identidade</span></li>
+                        <li><span>Fazer fraudes ou enviar spam</span></li>
+                        <li><span>Revender acessos mais valiosos</span></li>
+                    </ul>
+                    <p><span>Como te proteger:</span></p>
+                    <ul>
+                        <li><span>Usar palavras-passe diferentes para cada serviço</span></li>
+                        <li><span>Ativar autenticação de dois fatores</span> (2FA)</li>
+                        <li><span>Utilizar um gestor de palavras-passe</span></li>
+                        <li><span>Verificar se as tuas contas foram expostas </span>(ex: Have I Been Pwned)</li>
+                        <li><span>Desconfiar de emails suspeitos</span></li>
+                    </ul>
+                </section>
+                <section id="mercados-servicos">
+                    <h3>Serviços de cibercrime (CaaS).</h3>
+                    <p>Os Serviços de Cibercrime (CaaS - Cybercrime-as-a-Service) são uma evolução do mesmo ecossistema:
+                        em vez de alguém ter de saber hackear do zero, pode simplesmente comprar ou alugar ferramentas e
+                        serviços criminosos já prontos a usar.</p>
+                    <p>É basicamente o equivalente ilegal do modelo “as-a-service” usado por empresas legítimas (como
+                        software na cloud), mas aplicado ao cibercrime.</p>
+                    <p><span>O que são, na prática</span></p>
+                    <p>No CaaS, pessoas com mais conhecimentos técnicos desenvolvem ferramentas (malware,
+                        infraestruturas, exploits) e depois:</p>
+                    <ul>
+                        <li><span>Vendem acesso a outros criminosos</span></li>
+                        <li><span>Alugam por subscrição</span></li>
+                        <li><span>Cobram comissões sobre ataques</span></li>
+                    </ul>
+                    <p>Isto baixa muito a barreira de entrada: alguém com poucos conhecimentos pode lançar ataques.</p>
+                    <p><span>Tipos comuns de serviços CaaS</span></p>
+                    <ul>
+                        <li>Ransomware-as-a-Service (RaaS) <ul>
+                                <li>Plataformas que fornecem ransomware pronto a usar</li>
+                                <li>O “cliente” só precisa de o distribuir</li>
+                                <li>Lucros são partilhados com o criador</li>
+                            </ul>
+                        <li>Phishing-as-a-Service (PhaaS)<ul>
+                                <li>Kits completos para criar páginas falsas e campanhas</li>
+                                <li>Incluem templates, envio de emails e recolha de dados</li>
+                                <li>Baseiam-se em técnicas de phishing</li>
+                            </ul>
+                        </li>
+                        <li>Malware-as-a-Service (MaaS)<ul>
+                                <li>Malware alugado com suporte técnico</li>
+                                <li>Painéis de controlo para gerir vítimas</li>
+                                <li>Atualizações para evitar deteção</li>
+                            </ul>
+                        </li>
+                        <li>DDoS-as-a-Service<ul>
+                                <li>Ataques de negação de serviço por encomenda</li>
+                                <li>Qualquer pessoa pode pagar para “deitar abaixo” um site</li>
+                            </ul>
+                        <li>Acesso inicial (Initial Access Brokers)<ul>
+                                <li>Venda de acessos já comprometidos a empresas ou sistemas</li>
+                                <li>Muitas vezes ligados a ataques com ransomwar</li>
+                            </ul>
+                        </li>
+                        </li>
+                        </li>
+                    </ul>
+                </section>
+                <section id="mercados-infra">
+                    <h3>Infraestruturas como bulletproof hosting.</h3>
+                    <p>o Bulletproof Hosting (BPF) é o "porto seguro" do ecossistema do cibercrime. Enquanto providers
+                        legítimos (como AWS, Google Cloud ou Azure) têm políticas rígidas contra abusos, os providers
+                        bulletproof são desenhados especificamente para ignorar denúncias e manter conteúdos maliciosos
+                        online a todo custo.</p>
+                    <p>A principal diferença não está na tecnologia, mas na política de conformidade. Um provider comum
+                        suspende a nossa conta se receber uma notificação de abuso (DMCA, spam, malware).</p>
+                    <p>Um provider bulletproof:</p>
+
+                    <ul>
+                        <li><span>Ignora solicitações de "Take-down":</span> Eles simplesmente não respondem a
+                            autoridades ou pesquisadores de segurança.</li>
+                        <li><span>Localização Estratégica:</span> Operam em jurisdições com leis cibernéticas fracas
+                            ou onde a cooperação policial internacional é inexistente (ex: certas regiões na Europa de
+                            Leste, Ásia Central ou paraísos fiscais).</li>
+                        <li><span>Aceitação de Atividades Ilícitas: </span>Permitem explicitamente o alojamento de
+                            botnets, sites de phishing, fóruns de hacking e painéis de controle de ransomware.</li>
+                    </ul>
+                    <p>Para evitar que a infraestrutura seja derrubada por forças da lei (como o FBI ou a Europol), eles
+                        utilizam métodos técnicos avançados:</p>
+                    <p><span>Redes de Proximidade (Fast-Flux)</span></p>
+                    <p>Muitos usam técnicas de <span>Fast-Flux DNS</span>, onde os endereços IP associados a um domínio
+                        mudam constantemente (por vezes a cada poucos minutos). Isso dificulta o bloqueio por IP, pois o
+                        tráfego é redirecionado através de uma rede de nós comprometidos (proxies).</p>
+                    <p><span>ASNs de Baixa Reputação</span></p>
+                    <p>Esses providers muitas vezes possuem os seus próprios Sistemas Autónomos <span>(ASNs)</span>.
+                        Eles anunciam as suas próprias rotas de IP e, se um bloco de IPs for banido por firewalls
+                        globais, eles rapidamente migram para novos blocos que "alugaram" ou adquiriram de forma
+                        obscura.</p>
+                    <p>Para quem trabalha na defesa (Blue Team), o BPF é um desafio constante porque:</p>
+                    <ul>
+                        <li><span>Dificulta a Atribuição:</span> É quase impossível saber quem é o dono real do
+                            servidor.</li>
+                        <li><span>Persistência de Ameaças:</span> Campanhas de malware que seriam eliminadas em horas
+                            num host normal podem durar meses num host bulletproof.</li>
+                        <li><span>Jogo de "Gato e Rato":</span> Bloquear um IP de um host desses é apenas uma solução
+                            temporária, pois a infraestrutura é altamente volátil.</li>
+                    </ul>
+                </section>
+
+            </article>
+
+            <article id="casos-reais">
+                <h1 id="casos-reais-titulo">Casos reais</h1>
                 <hr>
-                
-                <div class="contacto">
-                    <h3>Contacto da Equipa</h3>
-                    <p>Email: equipa@darkwebdecoded.pt</p>
-                    <p>Instituição: Tecnologias de Cloud - 2025/2026</p>
-                </div>
-            </div>
-        </section>
-    </main>
+                <h2>Operação Alice — 373 mil sites fraudulentos derrubados</h2>
 
-    <footer>
+                <section id="caso-alice-resumo">
+                    <h3>Resumo da operação.</h3>
+                    <p>Uma operação internacional de grande escala, liderada pelas autoridades alemãs com o apoio
+                        europeu, resultou no encerramento de mais de 373 mil sites na dark web. Segundo os detalhes
+                        partilhados pela Europol, estas plataformas dedicavam-se à venda de falsos pacotes de material
+                        de abuso sexual infantil e a diversos serviços de cibercrime.</p>
+                    <p><span>Principais resultados:</span> Sites fraudulentos derrubados: +373.000 | Servidores
+                        apreendidos: 105 | Utilizadores identificados: 440 | Período da investigação: 2021 — 2026 (quase
+                        5 anos).</p>
+                </section>
+
+                <section id="caso-alice-gestao">
+                    <h3>Como um único operador geria centenas de milhares de sites.</h3>
+                    <p>O suspeito principal é um homem de 35 anos residente na China. Sozinho, ele operava mais de
+                        373.000 domínios .onion (sites na dark web).</p>
+                    <p><span>Como funcionava o esquema:</span> Entre fevereiro de 2020 e julho de 2025, usou mais de
+                        90.000 desses domínios para anunciar conteúdos ilegais. Os sites vendiam "pacotes" de material
+                        de abuso sexual infantil (CSAM) e serviços de cibercrime (dados de cartões de crédito, acessos a
+                        sistemas). Os preços variavam entre €17 e €215 por pacote. Os clientes pagavam em Bitcoin após
+                        fornecerem email. Os sites eram FRAUDULENTOS - o material prometido nunca era entregue. O
+                        suspeito terá feito um lucro de cerca de €345.000 com aproximadamente 10.000 clientes em todo o
+                        mundo.</p>
+                </section>
+
+                <section id="caso-alice-rastreio">
+                    <h3>Como a polícia rastreou servidores e domínios.</h3>
+                    <p><span>Métodos utilizados pelas autoridades:</span> Investigação iniciada em meados de 2021
+                        contra a plataforma "Alice with Violence CP". Rastreio de pagamentos em criptomoedas - a Europol
+                        ajudou a seguir as transações Bitcoin. Análise de servidores - o suspeito usou uma rede de até
+                        287 servidores, sendo 105 localizados na Alemanha. Cooperação internacional - 23 países
+                        partilharam informações e coordenaram prisões. Identificação de utilizadores - 440 clientes
+                        foram identificados e estão a ser investigados.</p>
+                    <p><span>Declaração da diretora da Europol, Catherine De Bolle:</span> "Operation Alice sends a
+                        clear message: there is nowhere to hide for criminals when the international law enforcement
+                        community works hand in glove." (Em português: "A Operação Alice envia uma mensagem clara: não
+                        há onde se esconder para criminosos quando a comunidade internacional de aplicação da lei
+                        trabalha em uníssono.")</p>
+                </section>
+
+                <section id="caso-alice-impacto">
+                    <h3>Impacto global.</h3>
+                    <p><span>Países participantes:</span> 23 países, incluindo Alemanha (líder), Portugal (PJ), EUA
+                        (HSI), Reino Unido (NCA), Austrália, Canadá, França, Espanha, Países Baixos, Ucrânia, etc.</p>
+                    <p><span>Impactos concretos:</span> Mais de 373.000 sites fraudulentos foram desligados. 105
+                        servidores apreendidos (computadores, telemóveis, discos). 440 utilizadores identificados
+                        (muitos a aguardar investigação). Mandado de prisão internacional emitido contra o operador.</p>
+                    <p><span>Exemplo prático da proteção de vítimas:</span> Em agosto de 2023, investigadores da
+                        polícia alemã fizeram uma busca à casa de um pai de 31 anos que transferiu €20 para comprar um
+                        pacote com 70 GB de material de abuso infantil. O homem foi condenado.</p>
+                </section>
+            </article>
+
+
+            <article id="caso-leak">
+                <h2>Operation Leak — O fim do maior mercado de credenciais roubadas</h2>
+
+                <section id="caso-leak-base">
+                    <h3>O que era o LeakBase.</h3>
+
+                    <p></p>
+                </section>
+
+                <section id="caso-leak-base">
+                    <h3>Como funcionava o comércio de credenciais.</h3>
+
+                    <p></p>
+                </section>
+
+                <section id="caso-leak-base">
+                    <h3>Ação coordenada entre 14 países.</h3>
+
+                    <p></p>
+                </section>
+
+                <section id="caso-leak-base">
+                    <h3>Apreensão de bases de dados e logs.</h3>
+
+                    <p></p>
+                </section>
+            </article>
+
+            <article id="caso-endgame">
+                <h2>Operation Endgame — Como 300 servidores e 373 mil listings foram derrubados</h2>
+
+                <section id="caso-endgame-brokers">
+                    <h3>O papel dos initial access brokers.</h3>
+
+                    <p></p>
+                </section>
+
+                <section id="caso-endgame-europol">
+                    <h3>Como a Europol atacou a infraestrutura de ransomware.</h3>
+
+                    <p></p>
+                </section>
+
+                <section id="caso-endgame-derrubar">
+                    <h3>A importância de derrubar servidores e domínios.</h3>
+
+                    <p></p>
+                </section>
+
+            </article>
+
+            <article id="como-policia-trabalha">
+                <h2>Como a polícia internacional investiga e derruba redes da dark web</h2>
+                <section id="como-policia-trabalha-intro">
+
+                    <p>A atuação contra o crime na dark web é um jogo de alto nível entre anonimato e tecnologia
+                        policial.
+                        Apesar do uso de Tor, criptografia e criptomoedas, as forças internacionais têm desenvolvido
+                        técnicas cada vez mais sofisticadas para identificar operadores, compradores e infraestruturas
+                        criminosas.
+                    </p>
+                </section>
+
+                <section id="como-policia-trabalha-cooperacao">
+
+                    <h3>Cooperação Europol, FBI, Interpol.</h3>
+
+                    <p>O fator mais importante no combate ao crime na dark web é a cooperação internacional.</p>
+                    <p>Nenhuma agência consegue agir sozinha, porque:</p>
+
+                    <ul>
+                        <li>servidores estão em vários países</li>
+                        <li>criminosos operam globalmente</li>
+                        <li>pagamentos e comunicações atravessam múltiplas jurisdições</li>
+                    </ul>
+
+                    <p>As grandes operações (como Silk Road, AlphaBay, Hansa, entre outras) só foram possíveis graças à
+                        colaboração entre FBI, Europol, Interpol e polícias nacionais.</p>
+
+                    <p>Além disso, organizações como a INTERPOL mantêm plataformas globais para troca rápida de
+                        informações e coordenação de ações simultâneas.</p>
+                </section>
+
+                <section id="como-policia-trabalha-tecnicas">
+                    <h3>Técnicas: infiltração, análise de logs, apreensão de servidores, cooperação com ISPs.</h3>
+
+                    <ol>
+                        <li>Infiltração e operações encobertas</li>
+                        <p>Investigadores criam perfis falsos, participam de fóruns, fazem compras controladas e ganham
+                            confiança dos administradores.</p>
+
+                        <li>Análise de logs e falhas de OPSEC</li>
+                        <p>Criminosos cometem erros como:</p>
+                        <ul>
+                            <li>reutilizar emails pessoais</li>
+                            <li>usar servidores mal configurados</li>
+                            <li>deixar rastros em metadados</li>
+                        </ul>
+                        <p>Esses deslizes já levaram à prisão de administradores de grandes mercados.</p>
+
+                        <li>Apreensão de servidores e dispositivos</li>
+                        <p>Quando um servidor é apreendido:</p>
+                        <ul>
+                            <li>logs internos revelam identidades</li>
+                            <li>mensagens privadas são recuperadas</li>
+                            <li>carteiras de criptomoedas são rastreadas</li>
+                            <li>endereços .onion são desativados</li>
+                        </ul>
+                        <p>A apreensão física é um dos métodos mais eficazes.</p>
+
+                        <li>Cooperação com ISPs e empresas privadas</li>
+                        <p>Fornecedores de internet e empresas de segurança ajudam a:</p>
+
+                        <ul>
+                            <li>identificar tráfego suspeito</li>
+                            <li>fornecer dados de rede</li>
+                            <li>bloquear infraestrutura criminosa</li>
+                        </ul>
+
+                        <p>A Europol destaca a importância de parcerias público‑privadas.</p>
+
+                        <li>Rastreamento de criptomoedas</li>
+                        <p>Ferramentas avançadas de blockchain analysis permitem:</p>
+
+                        <ul>
+                            <li>seguir transações</li>
+                            <li>identificar padrões</li>
+                            <li>ligar carteiras a indivíduos</li>
+                        </ul>
+                        <p>Mesmo criptomoedas “anônimas” podem ser rastreadas com técnicas modernas.</p>
+
+                        <li>Forense digital e live forensics</li>
+                        <p>Técnicas incluem:</p>
+                        <ul>
+                            <li>captura de RAM</li>
+                            <li>extração de chaves de criptografia</li>
+                            <li>recuperação de dados apagados</li>
+                            <li>análise de VPNs, PGP keys e wallets</li>
+                        </ul>
+                        <p>Treinamentos da UNODC reforçam a necessidade de preservar cadeia de custódia e agir
+                            rapidamente antes que suspeitos desliguem dispositivos.</p>
+
+                        <li>A importância de operações sincronizadas em vários países</li>
+                        <p>Operações como AlphaBay e Hansa só funcionaram porque:</p>
+
+                        <ul>
+                            <li>vários países agiram no mesmo dia e hora</li>
+                            <li>servidores foram apreendidos simultaneamente</li>
+                            <li>administradores foram presos antes de alertarem usuários</li>
+                            <li>domínios e backups foram capturados ao mesmo tempo</li>
+                        </ul>
+                        <p>Sem sincronização, criminosos migrariam para novos servidores em minutos.</p>
+
+
+
+
+
+
+
+                    </ol>
+
+                </section>
+
+                <section id="como-policia-trabalha-operacoes">
+                    <h3>A importância de operações sincronizadas em vários países.</h3>
+                </section>
+
+                <section id="como-policia-trabalha">
+                    <h3>Como os dados apreendidos ajudam a identificar criminosos.</h3>
+                </section>
+
+            </article>
+
+            <article id="impacto">
+                <h2>O impacto dessas operações no ecossistema do cibercrime</h2>
+
+                <section id="impacto-derrubar-infra">
+                    <h3>Como derrubar infraestrutura afeta ransomware e fraudes.</h3>
+                </section>
+
+                <section id="impacto-migracao">
+                    <h3>Migração de criminosos para novos fóruns.</h3>
+                </section>
+
+                <section id="impacto-efeito">
+                    <h3>Efeito psicológico: “ninguém está seguro”.</h3>
+                </section>
+            </article>
+
+            <article id="conclusao">
+                <h1>Conclusão</h1>
+
+                <h2>O futuro da luta contra o crime na dark web</h2>
+
+                <section>
+                    <h3>Tendências: IA, automação, cooperação global.</h3>
+
+                </section>
+            </article>
+        </div>
+
+        <!-- 
+        <aside id="menu-lateral">
+            <h5>Ligações</h5>
+        </aside>
+        -->
+    </main>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 DarkWebDecoded - Projeto de Tecnologias de Cloud</p>
-            <p><a href="#inicio">Voltar ao topo ↑</a></p>
+            <p>&copy; 2025 DarkWebDecoded</p>
         </div>
     </footer>
+
+    <!-- Botão flutuante -->
+    <a href="#intro" class="btn-top" aria-label="Voltar ao topo">
+        <!-- Ícone seta para cima (SVG inline) -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </a>
+
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const links = document.querySelectorAll('.nav-link');
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+
+        // Destacar link ativo conforme scroll
+        const sections = [...document.querySelectorAll('main section, main article')];
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + 120;
+
+            let currentId = null;
+            sections.forEach(sec => {
+                if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
+                    currentId = sec.id || sec.parentElement.id;
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href').replace('#', '');
+                if (href === currentId) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>

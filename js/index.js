@@ -5,25 +5,77 @@ const links = document.querySelectorAll('.nav-link');
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.nav-menu');
 const newsletter = document.getElementById("newsletter-form");
-
 const btn = document.getElementById("btn-onion");
 const extra = document.querySelector(".onion-extra");
 
+const imagensFundo = {
+    intro: "images/image-header.jpg",
+    mercados: "images/image-header.jpg",
+    caso_real: "images/image-header.jpg",
+    trabalho_policial: "images/image-header.jpg"
+};
+
+function carregarPagina(page) {
+    fetch(`/${page}.html`)
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("content").innerHTML = html;
+            setupReadMore(); // reanexar eventos aos novos elementos
+        })
+        .catch(() => {
+            document.getElementById("content").innerHTML =
+                "<p>Erro ao carregar conteúdo.</p>";
+        });
+}
+
+function atualizarImagemFundo(page) {
+    const hero = document.querySelector(".hero");
+
+    if (imagensFundo[page]) {
+        hero.style.backgroundImage = `url('${imagensFundo[page]}')`;
+    }
+}
+
+function navigateTo(page) {
+    window.location.hash = page;
+    carregarPagina(page);
+    atualizarImagemFundo(page);
+}
+
+window.addEventListener("hashchange", () => {
+    const page = location.hash.replace("#", "") || "intro";
+    carregarPagina(page);
+    atualizarImagemFundo(page);
+});
+
+// inicial
+navigateTo("intro");
+
+
+
 newsletter.addEventListener("submit", function (e) {
-    e.preventDefault(); // impede o reload da página
-    
-    const email = document.getElementById("email").value;
+    e.preventDefault();
 
-    if (email.trim() === "") return;
+    const email = document.getElementById("email").value.trim();
+    if (email === "") return;
 
-    // guardar no localStorage
-    localStorage.setItem("newsletterEmail", email);
+    // 1. Buscar array existente ou criar um novo
+    let emails = JSON.parse(localStorage.getItem("newsletterEmails")) || [];
+
+    // 2. Adicionar o novo email ao array
+    emails.push(email);
+
+    // 3. Guardar o array atualizado
+    localStorage.setItem("newsletterEmails", JSON.stringify(emails));
 
     document.getElementById("newsletter-msg").textContent =
         "Obrigado! A tua subscrição foi registada.";
+
+    // opcional: limpar input
+    document.getElementById("email").value = "";
 });
 
-const savedEmail = localStorage.getItem("newsletterEmail");
+const savedEmail = localStorage.getItem("newsletterEmails");
 
 if (savedEmail) {
     console.log("Email já guardado:", savedEmail);

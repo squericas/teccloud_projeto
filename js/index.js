@@ -15,7 +15,7 @@ const imagensFundo = {
 };
 
 function carregarPagina(page) {
-    fetch(`paginas/${page}.html`)
+    fetch(`pages/${page}.html`)
         .then(res => res.text())
         .then(html => {
             document.getElementById("content").innerHTML = html;

@@ -1,8 +1,7 @@
 
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 const links = document.querySelectorAll('.nav-link');
-const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.nav-menu');
 const newsletter = document.getElementById("newsletter-form");
 const btn = document.getElementById("btn-onion");
@@ -16,7 +15,7 @@ const imagensFundo = {
 };
 
 function carregarPagina(page) {
-    fetch(`/${page}.html`)
+    fetch(`paginas/${page}.html`)
         .then(res => res.text())
         .then(html => {
             document.getElementById("content").innerHTML = html;
@@ -52,6 +51,43 @@ window.addEventListener("hashchange", () => {
 navigateTo("intro");
 
 
+const savedEmails = localStorage.getItem("newsletterEmails");
+
+if (savedEmails) { // EMAIL ALVOS EM LOCALSTORAGE
+    //console.log("Email já guardado:", savedEmails);
+}
+
+function setupReadMore() {
+    const boxes = document.querySelectorAll(".readmore-box");
+
+    boxes.forEach(box => {
+        const btn = box.querySelector(".btn-readmore");
+        const extra = box.querySelector(".readmore-extra");
+
+        btn.addEventListener("click", () => {
+            const isHidden = extra.style.display === "none" || extra.style.display === "";
+
+            extra.style.display = isHidden ? "block" : "none";
+            btn.textContent = isHidden ? "Ler menos" : "Ler mais";
+        });
+    });
+}
+
+setupReadMore();
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+});
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+    });
+});
+
+// Destacar link ativo conforme scroll
+const sections = [...document.querySelectorAll('main section, main article')];
+
 
 newsletter.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -75,46 +111,6 @@ newsletter.addEventListener("submit", function (e) {
     document.getElementById("email").value = "";
 });
 
-const savedEmail = localStorage.getItem("newsletterEmails");
-
-if (savedEmail) {
-    console.log("Email já guardado:", savedEmail);
-}
-
-function setupReadMore() {
-    const boxes = document.querySelectorAll(".readmore-box");
-
-    boxes.forEach(box => {
-        const btn = box.querySelector(".btn-readmore");
-        const extra = box.querySelector(".readmore-extra");
-
-        btn.addEventListener("click", () => {
-            const isHidden = extra.style.display === "none" || extra.style.display === "";
-
-            extra.style.display = isHidden ? "block" : "none";
-            btn.textContent = isHidden ? "Ler menos" : "Ler mais";
-        });
-    });
-}
-
-setupReadMore();
-
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-});
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-});
-
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('show');
-    });
-});
-
-// Destacar link ativo conforme scroll
-const sections = [...document.querySelectorAll('main section, main article')];
 
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + 120;

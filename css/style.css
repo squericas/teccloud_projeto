@@ -405,5 +405,7 @@ li>span {
 
     .autor-card {
         max-width: 90%;
+        min-width: 93%;
     }
+    
 }

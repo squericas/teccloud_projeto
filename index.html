@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_2.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>"DarkWebDecoded</title>
 </head>
 
@@ -37,8 +37,8 @@
                     </a>
                 </li>
 
-                <li><a href="#casos-reais" class="nav-link">
-                        Casos Reais
+                <li><a href="#caso-real" class="nav-link">
+                        Caso Real
                     </a>
                 </li>
 
@@ -54,10 +54,12 @@
 
 
 
-    <main id="container">
+    <main id="app">
+        <section class="hero">
+            <h1 id="intro-titulo">O que é Dark Web e por que ela importa?</h1>
+        </section>
         <div id="content">
             <article id="intro">
-                <h1 id="intro-titulo">O que é Dark Web e por que ela importa?</h1>
 
                 <section id="intro-1">
                     <div id="intro-1-conceito">
@@ -102,43 +104,57 @@
                             um pedaço do puzzle.</p>
                     </div>
 
-                    <div id="intro-1-onion">
+                    <div class="readmore-box">
+
                         <h3>Domínios .onion</h3>
-                        <p>Domínios .onion são endereços especiais da Dark Web, acessíveis apenas através do navegador
+
+                        <p>
+                            Domínios .onion são endereços especiais da Dark Web, acessíveis apenas através do navegador
                             Tor Browser, que permitem anonimato total. Eles utilizam criptografia em camadas e
-                            roteamento onion, ocultando o IP e a localização do servidor. Não são DNS reais, sendo
-                            derivados de chaves criptográficas, o que os torna ilegíveis e difíceis de rastrear.</p>
-                        <p><span>Principais Características:</span></p>
-                        <ul>
-                            <li><span>Acesso Restrito:</span> Necessário o uso do Tor Browser para navegar na rede
-                                Tor.</li>
-                            <li><span>Anonimato:</span> Protege a identidade de utilizadores, jornalistas e
-                                ativistas, mas também é usado para atividades ilícitas.</li>
-                            <li><span>Estrutura:</span> São sequências longas e aleatórias de caracteres (ex:
-                                expyuzz4wqqyqhjn.onion).</li>
-                            <li><span>Sem Registro Central:</span> Não podem ser facilmente apreendidos, pois não
-                                dependem de autoridades centrais de domínio.</li>
-                        </ul>
+                            roteamento onion, ocultando o IP e a localização do servidor. Não são DNS real, sendo
+                            derivados de chaves criptográficas, o que os torna ilegíveis e difíceis de rastrear.
+                        </p>
+
+                        <div class="readmore-extra">
+                            <p><span>Principais Características:</span></p>
+                            <ul>
+                                <li><span>Acesso Restrito:</span> Necessário o uso do Tor Browser.</li>
+                                <li><span>Anonimato:</span> Protege utilizadores e ativistas.</li>
+                                <li><span>Estrutura:</span> Sequências longas e aleatórias.</li>
+                                <li><span>Sem Registro Central:</span> Não dependem de DNS tradicional.</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-readmore">Ler mais</button>
+
                     </div>
 
-                    <div id="intro-1-anonimato">
+                    <div class="readmore-box">
+
                         <h3>Anonimato</h3>
                         <p>Anonimato é a condição de não identificação, onde a verdadeira identidade de uma pessoa ou
                             autor de um ato é oculta, sem nome ou assinatura. Pode ser um direito, protegendo fontes ou
                             permitindo denúncias, ou um método de comunicação online para ocultar intenções.
                             Diferencia-se da privacidade, que oculta informações, focando em ocultar o autor.</p>
-                        <ul>
-                            <li><span>Definição:</span> Qualidade do que é anónimo, incógnito ou desconhecido.</li>
-                            <li><span>Aplicações:</span> Usado em denúncias, liberdade de expressão, arte
-                                (pseudónimos) e interações digitais.</li>
-                            <li><span>Contexto Online:</span> Envolve técnicas (VPNs, Tor, pseudónimos) para navegar
-                                sem ser rastreado.</li>
-                            <li><span>Anonimato vs. Privacidade:</span> A privacidade protege a informação; o
-                                anonimato protege a identidade do autor.</li>
-                            <li><span>Exemplos:</span> Enviar um e-mail sem identificação ou publicar um conteúdo
-                                sem colocar assinatura.</li>
-                        </ul>
-                        <p>O termo deriva do grego anōnymía, significando literalmente "sem nome".</p>
+
+                        <div class="readmore-extra">
+
+                            <ul>
+                                <li><span>Definição:</span> Qualidade do que é anónimo, incógnito ou desconhecido.</li>
+                                <li><span>Aplicações:</span> Usado em denúncias, liberdade de expressão, arte
+                                    (pseudónimos) e interações digitais.</li>
+                                <li><span>Contexto Online:</span> Envolve técnicas (VPNs, Tor, pseudónimos) para navegar
+                                    sem ser rastreado.</li>
+                                <li><span>Anonimato vs. Privacidade:</span> A privacidade protege a informação; o
+                                    anonimato protege a identidade do autor.</li>
+                                <li><span>Exemplos:</span> Enviar um e-mail sem identificação ou publicar um conteúdo
+                                    sem colocar assinatura.</li>
+                            </ul>
+                            <p>O termo deriva do grego anōnymía, significando literalmente "sem nome".</p>
+                        </div>
+
+                        <button class="btn-readmore">Ler mais</button>
+
                     </div>
                 </section>
 
@@ -338,8 +354,8 @@
 
             </article>
 
-            <article id="casos-reais">
-                <h1 id="casos-reais-titulo">Casos reais</h1>
+            <article id="caso-real">
+                <h1 id="caso-real-titulo">Caso real</h1>
                 <hr>
                 <h2>Operação Alice — 373 mil sites fraudulentos derrubados</h2>
 
@@ -393,58 +409,6 @@
                         polícia alemã fizeram uma busca à casa de um pai de 31 anos que transferiu €20 para comprar um
                         pacote com 70 GB de material de abuso infantil. O homem foi condenado.</p>
                 </section>
-            </article>
-
-
-            <article id="caso-leak">
-                <h2>Operation Leak — O fim do maior mercado de credenciais roubadas</h2>
-
-                <section id="caso-leak-base">
-                    <h3>O que era o LeakBase.</h3>
-
-                    <p></p>
-                </section>
-
-                <section id="caso-leak-base">
-                    <h3>Como funcionava o comércio de credenciais.</h3>
-
-                    <p></p>
-                </section>
-
-                <section id="caso-leak-base">
-                    <h3>Ação coordenada entre 14 países.</h3>
-
-                    <p></p>
-                </section>
-
-                <section id="caso-leak-base">
-                    <h3>Apreensão de bases de dados e logs.</h3>
-
-                    <p></p>
-                </section>
-            </article>
-
-            <article id="caso-endgame">
-                <h2>Operation Endgame — Como 300 servidores e 373 mil listings foram derrubados</h2>
-
-                <section id="caso-endgame-brokers">
-                    <h3>O papel dos initial access brokers.</h3>
-
-                    <p></p>
-                </section>
-
-                <section id="caso-endgame-europol">
-                    <h3>Como a Europol atacou a infraestrutura de ransomware.</h3>
-
-                    <p></p>
-                </section>
-
-                <section id="caso-endgame-derrubar">
-                    <h3>A importância de derrubar servidores e domínios.</h3>
-
-                    <p></p>
-                </section>
-
             </article>
 
             <article id="como-policia-trabalha">
@@ -559,58 +523,39 @@
 
                 </section>
 
-                <section id="como-policia-trabalha-operacoes">
-                    <h3>A importância de operações sincronizadas em vários países.</h3>
-                </section>
-
-                <section id="como-policia-trabalha">
-                    <h3>Como os dados apreendidos ajudam a identificar criminosos.</h3>
-                </section>
-
             </article>
 
-            <article id="impacto">
-                <h2>O impacto dessas operações no ecossistema do cibercrime</h2>
-
-                <section id="impacto-derrubar-infra">
-                    <h3>Como derrubar infraestrutura afeta ransomware e fraudes.</h3>
-                </section>
-
-                <section id="impacto-migracao">
-                    <h3>Migração de criminosos para novos fóruns.</h3>
-                </section>
-
-                <section id="impacto-efeito">
-                    <h3>Efeito psicológico: “ninguém está seguro”.</h3>
-                </section>
-            </article>
-
-            <article id="conclusao">
-                <h1>Conclusão</h1>
-
-                <h2>O futuro da luta contra o crime na dark web</h2>
+            <article class="newsletter">
 
                 <section>
-                    <h3>Tendências: IA, automação, cooperação global.</h3>
+                    <h2>Subscreve a nossa Newsletter</h2>
+                    <p>Recebe atualizações exclusivas sobre investigações, operações policiais e o mundo oculto da dark
+                        web.
+                    </p>
 
+                    <form id="newsletter-form">
+                        <input type="email" id="email" placeholder="O teu email" required>
+                        <button type="submit">Subscrever</button>
+                    </form>
+
+                    <span id="newsletter-msg"></span>
                 </section>
+
             </article>
+
         </div>
 
-        <!-- 
-        <aside id="menu-lateral">
-            <h5>Ligações</h5>
-        </aside>
-        -->
+
+
     </main>
     <footer class="footer">
-        <div class="container">
+        <div class="">
             <p>&copy; 2025 DarkWebDecoded</p>
         </div>
     </footer>
 
     <!-- Botão flutuante -->
-    <a href="#intro" class="btn-top" aria-label="Voltar ao topo">
+    <a href="/intro" class="btn-top" aria-label="Voltar ao topo" data-link>
         <!-- Ícone seta para cima (SVG inline) -->
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -618,50 +563,7 @@
         </svg>
     </a>
 
-
-    <script>
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const links = document.querySelectorAll('.nav-link');
-        const toggle = document.querySelector('.nav-toggle');
-        const menu = document.querySelector('.nav-menu');
-
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('show');
-        });
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-            });
-        });
-
-        // Destacar link ativo conforme scroll
-        const sections = [...document.querySelectorAll('main section, main article')];
-
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + 120;
-
-            let currentId = null;
-            sections.forEach(sec => {
-                if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
-                    currentId = sec.id || sec.parentElement.id;
-                }
-            });
-
-            links.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href').replace('#', '');
-                if (href === currentId) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 

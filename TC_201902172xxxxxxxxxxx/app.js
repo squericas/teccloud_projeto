@@ -7,7 +7,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const app = express();
 
 // 1. Conexão ao MySQL
-const sequelize = new Sequelize('darkwebdecoded_db', 'tc', 'tctc', {
+const sequelize = new Sequelize('darkwebdecoded_db', 'admin', 'admin', {
     host: 'localhost',
     dialect: 'mysql',
     logging: false
@@ -55,8 +55,11 @@ app.get('/api/artigos', handlers.getArtigos);
 app.post('/api/artigos', handlers.createArtigo);
 app.delete('/api/artigos/:id', handlers.deleteArtigo);
 app.put('/api/artigos/:id', handlers.updateArtigo);
+
 //Iniciar Base de Dados e Servidor
+
 const PORT = 3000;
+
 sequelize.sync({ force: false })
     .then(() => {
         console.log("Base de dados MySQL sincronizada!");

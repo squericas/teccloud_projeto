@@ -1,5 +1,6 @@
 
 const bcrypt = require('bcryptjs');
+
 module.exports = (User, Artigo) => {
     return {
         // AUTENTICAÇÃO
@@ -7,12 +8,15 @@ module.exports = (User, Artigo) => {
             try {
                 const { username, email, password } = req.body;
                 const hashedPassword = await bcrypt.hash(password, 10);
+
                 await User.create({ username, email, password: hashedPassword });
+
                 res.status(201).json({ message: "Utilizador registado com sucesso!" });
             } catch (error) {
                 res.status(400).json({ error: "Erro ao registar: utilizador ou email já existem." });
             }
         },
+
         login: async (req, res) => {
             try {
                 const { username, password } = req.body;
@@ -27,12 +31,14 @@ module.exports = (User, Artigo) => {
                 res.status(500).json({ error: "Erro interno no servidor durante o login." });
             }
         },
+
         logout: (req, res) => {
             req.session.destroy((err) => {
                 if (err) return res.status(500).json({ error: "Erro ao fechar sessão." });
                 res.status(200).json({ message: "Sessão terminada." });
             });
         },
+
         authStatus: (req, res) => {
             if (req.session.userId) {
                 res.status(200).json({ loggedIn: true, username: req.session.username });
@@ -40,6 +46,7 @@ module.exports = (User, Artigo) => {
                 res.status(200).json({ loggedIn: false });
             }
         },
+
         // CRUD
         getArtigos: async (req, res) => {
             try {
@@ -49,6 +56,7 @@ module.exports = (User, Artigo) => {
                 res.status(500).json({ error: "Erro ao listar artigos." });
             }
         },
+
         createArtigo: async (req, res) => {
             if (!req.session.userId) return res.status(401).json({ error: "Não autorizado. Faça login primeiro." });
             try {
@@ -59,6 +67,7 @@ module.exports = (User, Artigo) => {
                 res.status(400).json({ error: "Erro ao criar artigo." });
             }
         },
+
         deleteArtigo: async (req, res) => {
             if (!req.session.userId) return res.status(401).json({ error: "Acesso negado." });
             try {
@@ -70,6 +79,7 @@ module.exports = (User, Artigo) => {
                 res.status(500).json({ error: "Erro ao eliminar artigo." });
             }
         },
+        
         updateArtigo: async (req, res) => {
             if (!req.session.userId) return res.status(401).json({ error: "Acesso negado." });
             try {

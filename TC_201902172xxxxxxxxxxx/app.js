@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-    secret: 'chave_secreta_estg_tc',
+    secret: '835f8acbe85b06af38e1f78affb394fd', // MD5
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 24 * 60 * 60 * 1000 } // Sessão expira em 1 dia

@@ -1,0 +1,180 @@
+<article id="intro">
+
+    <section id="intro-1">
+        <div id="intro-1-conceito">
+            <h3>O que é a Dark Web?</h3>
+            <p>A Dark Web é uma parte oculta da internet, não indexada por motores de busca como o Google,
+                que exige softwares específicos (ex: Tor Browser) para acesso, garantindo alto anonimato e
+                criptografia. Embora usada para atividades criminosas (venda de dados, mercados ilegais),
+                também serve para privacidade em comunicações de jornalistas e ativistas, e o acesso a ela
+                sem conhecimento técnico oferece riscos altos de segurança.</p>
+        </div>
+
+        <div id="intro-1-tor">
+            <h3>Tor</h3>
+            <p>Tor (The Onion Router) é uma rede gratuita que permite navegar anonimamente. O teu tráfego é
+                encriptado em camadas e passa por 3 servidores voluntários (entry, middle e exit), de forma
+                que nenhum deles consegue ver toda a tua atividade ao mesmo tempo.</p>
+            <p>O Tor é usado por jornalistas, ativistas e cidadãos comuns para proteger a sua privacidade.
+                No entanto, a rede é lenta (3-10x mais que o normal) e existem riscos como exit nodes
+                maliciosos (que podem ver tráfego não encriptado) e bloqueios por parte de muitos sites.</p>
+            <p>Para usar o Tor em segurança, descarrega o Tor Browser, evita fazer login em contas pessoais
+                e usa sempre sites com HTTPS (cadeado verde).</p>
+            <p>O projeto foi desenvolvido originalmente pela Marinha dos EUA para proteger comunicações
+                sensíveis. Atualmente é mantido por uma organização sem fins lucrativos e é usado por
+                milhões de pessoas em todo o mundo.</p>
+
+            <h4>Como funciona o Tor?</h4>
+            <p><span>A metáfora da cebola:</span> O nome "Onion Router" vem da forma como os dados são
+                tratados. Quando usas o Tor, a tua informação é encriptada em várias camadas, como as
+                camadas de uma cebola.</p>
+            <p><span>O circuito de 3 nós (relays):</span> O teu tráfego não vai diretamente da tua casa
+                para o site que queres visitar. Em vez disso, passa por três servidores voluntários
+                (chamados relays ou nós), escolhidos aleatoriamente.</p>
+            <ul>
+                <li><span>Entry Node (Nó de Entrada):</span> Recebe o teu tráfego primeiro. Sabe quem és
+                    (teu IP) mas não sabe que site vais visitar.</li>
+                <li><span>Middle Node (Nó Intermédio):</span> Encaminha o tráfego entre nós. Não sabe
+                    quem és nem qual é o destino final.</li>
+                <li><span>Exit Node (Nó de Saída):</span> Envia o pedido para o site final. Sabe o site
+                    de destino mas não sabe quem és (vê o IP do nó anterior).</li>
+            </ul>
+            <p>Nenhum destes nós consegue ver todo o caminho ao mesmo tempo. É como se cada um visse apenas
+                um pedaço do puzzle.</p>
+        </div>
+
+        <div class="readmore-box">
+
+            <h3>Domínios .onion</h3>
+
+            <p>
+                Domínios .onion são endereços especiais da Dark Web, acessíveis apenas através do navegador
+                Tor Browser, que permitem anonimato total. Eles utilizam criptografia em camadas e
+                roteamento onion, ocultando o IP e a localização do servidor. Não são DNS real, sendo
+                derivados de chaves criptográficas, o que os torna ilegíveis e difíceis de rastrear.
+            </p>
+
+            <div class="readmore-extra">
+                <img src="images/onion.jpg.jpeg" alt="">
+
+                <p><span>Principais Características:</span></p>
+                <ul>
+                    <li><span>Acesso Restrito:</span> Necessário o uso do Tor Browser.</li>
+                    <li><span>Anonimato:</span> Protege utilizadores e ativistas.</li>
+                    <li><span>Estrutura:</span> Sequências longas e aleatórias.</li>
+                    <li><span>Sem Registro Central:</span> Não dependem de DNS tradicional.</li>
+                </ul>
+            </div>
+
+            <button class="btn-readmore">Ler mais</button>
+
+        </div>
+
+        <div class="readmore-box">
+
+            <h3>Anonimato</h3>
+            <p>Anonimato é a condição de não identificação, onde a verdadeira identidade de uma pessoa ou
+                autor de um ato é oculta, sem nome ou assinatura. Pode ser um direito, protegendo fontes ou
+                permitindo denúncias, ou um método de comunicação online para ocultar intenções.
+                Diferencia-se da privacidade, que oculta informações, focando em ocultar o autor.</p>
+            <img src="images/anonimato.jpg.jpeg" alt="">
+
+            <div class="readmore-extra">
+
+                <ul>
+                    <li><span>Definição:</span> Qualidade do que é anónimo, incógnito ou desconhecido.</li>
+                    <li><span>Aplicações:</span> Usado em denúncias, liberdade de expressão, arte
+                        (pseudónimos) e interações digitais.</li>
+                    <li><span>Contexto Online:</span> Envolve técnicas (VPNs, Tor, pseudónimos) para navegar
+                        sem ser rastreado.</li>
+                    <li><span>Anonimato vs. Privacidade:</span> A privacidade protege a informação; o
+                        anonimato protege a identidade do autor.</li>
+                    <li><span>Exemplos:</span> Enviar um e-mail sem identificação ou publicar um conteúdo
+                        sem colocar assinatura.</li>
+                </ul>
+                <p>O termo deriva do grego anōnymía, significando literalmente "sem nome".</p>
+            </div>
+
+            <button class="btn-readmore">Ler mais</button>
+
+        </div>
+    </section>
+
+    <section id="intro-2">
+        <div id="intro-2-diferenca">
+            <h3>Diferença entre deep web e dark web</h3>
+            <p>A principal diferença é que a Deep Web engloba todo o conteúdo não indexado (e-mails, bancos,
+                arquivos privados) e é segura, enquanto a Dark Web é uma pequena parte oculta da Deep Web
+                que exige navegadores especiais (como o Tor) para anonimato, sendo frequentemente usada para
+                atividades ilícitas e riscos de segurança.</p>
+            <p><span>Deep Web (Internet Profunda):</span></p>
+            <ul>
+                <li><span>O que é:</span> Conteúdo da web não indexado por motores de busca (Google,
+                    Bing).</li>
+                <li><span>Acesso:</span> Navegadores comuns, mas exige login/senha.</li>
+                <li><span>Exemplos:</span> E-mails, serviços bancários, serviços de streaming pagos,
+                    bases de dados acadêmicas, páginas de nuvem.</li>
+                <li><span>Segurança:</span> Geralmente segura e faz parte do dia a dia.</li>
+            </ul>
+
+
+            <p><span>Dark Web (Internet Obscura):</span></p>
+            <ul>
+                <li><span>O que é:</span> Uma subcamada da Deep Web, criptografada e intencionalmente
+                    oculta.</li>
+                <li><span>Acesso:</span> Requer ferramentas específicas, como o navegador Tor.</li>
+                <li><span>Exemplos:</span> Fóruns anônimos, mercados de produtos ilegais (drogas,
+                    armas), sites com terminação .onion.</li>
+                <li><span>Segurança:</span> Alto risco de malware, golpes e conteúdo ilegal.</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section id="intro-3">
+        <div id="intro-2-diferenca">
+            <div class="readmore-box">
+
+                <div id="intro-3-criminosos">
+                    <h3>Por que criminosos usam a dark web</h3>
+                    <p>Criminosos utilizam a dark web principalmente pelo anonimato extremo e dificuldade de
+                        rastreamento pelas autoridades, permitindo atividades ilícitas com baixo risco de
+                        identificação. É um mercado negro para vender dados roubados (cartões, credenciais),
+                        armas,
+                        drogas e contratar serviços de hackers (Ransomware-as-a-Service).</p>
+
+                    <div class="readmore-extra">
+
+                        <p><span>Os principais motivos para o uso da dark web incluem:</span></p>
+                        <ul>
+                            <li><span>Anonimato e Criptografia:</span> A infraestrutura (como a rede Tor)
+                                oculta
+                                a
+                                localização e identidade dos usuários, dificultando a ação policial.</li>
+                            <li><span>Mercado Negro (Marketplaces):</span> Venda de informações
+                                confidenciais,
+                                dados
+                                bancários, documentos falsos e ferramentas de hacking.</li>
+                            <li><span>Comércio de Dados Roubados:</span> Local para negociar informações
+                                obtidas
+                                em
+                                ataques de ransomware e violações de dados.</li>
+                            <li><span>Comunicação Segura:</span> Fóruns clandestinos permitem que
+                                cibercriminosos
+                                planejem ataques e compartilhem técnicas sem serem detectados.</li>
+                            <li><span>Serviços Ilegais:</span> Oferta de ataques DDoS, malware personalizado
+                                e
+                                serviços de lavagem de dinheiro.</li>
+                        </ul>
+                        <p>Embora associada ao crime, a dark web também é usada para privacidade, jornalismo
+                            e
+                            por
+                            denunciantes (whistleblowers) em países com restrições.</p>
+                    </div>
+
+                    <button class="btn-readmore">Ler mais</button>
+
+                </div>
+            </div>
+    </section>
+</article>

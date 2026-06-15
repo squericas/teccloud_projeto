@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DarkWebDecoded</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio" class="nav-logo">
+                <img src="images/darkweb logo.jpg" alt="DarkWebDecoded" />
+                <span>DarkWebDecoded</span>
+            </a>
+
+            <button class="nav-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 18h16" />
+                </svg>
+
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#intro" class="nav-link">
+                        Introdução
+                    </a>
+                </li>
+
+                <li><a href="#mercados" class="nav-link">
+                        Mercados
+                    </a>
+                </li>
+
+                <li><a href="#caso_real" class="nav-link">
+                        Caso Real
+                    </a>
+                </li>
+
+                <li><a href="#trabalho_policial" class="nav-link">
+                        Trabalho Policial
+                    </a>
+                </li>
+
+                <li><a href="#autores" class="nav-link">
+                        Autores
+                    </a>
+                </li>
+                <li><a href="#artigos" class="nav-link">
+                        Artigos
+                    </a>
+                </li>
+                <li><a href="#admin" class="nav-link">
+                        Entrar
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app">
+        <section class="hero">
+            <h1 id="intro-titulo">O que é Dark Web e por que ela importa?</h1>
+        </section>
+
+        <div id="content">
+
+        </div>
+
+        <div id="container-admin"
+            style="display:none; justify-content: center; align-items: center; max-width: 1200px; height: 100%; margin: 40px auto; padding: 0 20px;">
+
+            <section id="auth-section" class="admin-card">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2 id="auth-title">Área de Administração - Iniciar Sessão</h2>
+                    <button id="logout-btn" class="btn-primary" style="display:none;">Terminar Sessão</button>
+                </div>
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="auth-username">Utilizador:</label>
+                        <input type="text" id="auth-username" required placeholder="Insira o seu username">
+                    </div>
+
+                    <div class="form-group" id="email-group" style="display: none;">
+                        <label for="auth-email">E-mail:</label>
+                        <input type="email" id="auth-email" placeholder="exemplo@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="auth-password">Palavra-passe:</label>
+                        <input type="password" id="auth-password" required placeholder="••••••••">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="auth-submit-btn" class="btn-primary">Entrar</button>
+                        <button type="button" id="auth-toggle-btn" class="btn-link">Criar uma conta</button>
+                    </div>
+                </form>
+                <div id="auth-message" class="form-message"></div>
+            </section>
+
+            <section id="crud-section" class="admin-card" style="display: none;">
+
+                <h2>Artigos Publicados</h2>
+                <div id="artigos-lista"></div>
+                <hr style="border-color: #1f1f2e; margin: 30px 0;">
+
+                <h2>Publicar Novo Conteúdo sobre Cibersegurança</h2>
+                <form id="artigo-form">
+                    <div class="form-group">
+                        <label for="artigo-titulo">Título do Artigo / Alerta:</label>
+                        <input type="text" id="artigo-titulo" required placeholder="Ex: Novo Ransomware detetado...">
+                    </div>
+                    <div class="form-group">
+                        <label for="artigo-categoria">Categoria:</label>
+                        <select id="artigo-categoria" required>
+                            <option value="">A carregar categorias...</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="artigo-conteudo">Conteúdo / Descrição Teórica:</label>
+                        <textarea id="artigo-conteudo" required
+                            placeholder="Escreva aqui a informação detalhada..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-success">Publicar na Base de Dados</button>
+                </form>
+
+                <hr style="border-color: #1f1f2e; margin: 30px 0;">
+
+                <h2>Categorias</h2>
+
+                <div id="categorias-lista"></div>
+
+                <h3>Criar Nova Categoria</h3>
+                <form id="categoria-form" >
+                    <div class="form-group">
+                        <label for="categoria-nome">Nome da Categoria:</label>
+                        <input type="text" id="categoria-nome" required placeholder="Ex: Malware, Darknet, Prevenção">
+                    </div>
+                    <button type="submit" class="btn-success" >Criar Categoria</button>
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Tecnologias de Cloud</p>
+        <!-- Botão flutuante -->
+        <a href="#intro" class="btn-top" aria-label="Voltar ao topo">
+            <!-- Ícone seta para cima (SVG inline) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6" />
+            </svg>
+        </a>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
